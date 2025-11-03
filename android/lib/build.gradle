@@ -2,6 +2,9 @@ def archiveName = "vosk-android"
 def pomName = "Vosk Android"
 def pomDescription = "Vosk speech recognition library for Android"
 
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf'
+
 android {
     namespace 'org.vosk'
     compileSdkVersion 36
@@ -26,6 +29,10 @@ task buildVosk(type: Exec) {
 
 dependencies {
     api 'net.java.dev.jna:jna:5.13.0@aar'
+    implementation platform('com.google.firebase:firebase-bom:33.5.1')
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-perf'
+    implementation 'com.google.firebase:firebase-config'
 }
 
 //preBuild.dependsOn buildVosk
