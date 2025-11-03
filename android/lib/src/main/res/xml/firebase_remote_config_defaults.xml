@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <!-- Default values used when Remote Config values are unavailable. -->
+    <entry>
+        <key>vosk_sample_rate</key>
+        <value>16000</value>
+    </entry>
+    <entry>
+        <key>vosk_enable_debug_logs</key>
+        <value>false</value>
+    </entry>
+</defaultsMap>
